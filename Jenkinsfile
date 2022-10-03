@@ -42,7 +42,8 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                    any
+            docker 'maven'
+
             }
             steps {
                 sh 'mvn clean package -X'
